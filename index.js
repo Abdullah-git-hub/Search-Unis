@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
+app.set("view engine", "ejs");
 
 app.use(express.static("countries"));
 
@@ -9,7 +10,8 @@ app.listen(3000);
 
 app.get("/", (req, res) => {
     // res.sendFile("./views/index.html", { root: __dirname });
-    res.sendFile("Hello vai");
+    // res.sendFile("Hello vai");
+    res.render("index");
 });
 
 app.get("/uni/:country_name", (req, res) => {
