@@ -3,6 +3,8 @@ const fs = require("fs");
 
 const app = express();
 
+app.use(express.static("countries"));
+
 app.listen(3000);
 
 app.get("/", (req, res) => {
