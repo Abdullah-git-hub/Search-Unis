@@ -24,5 +24,5 @@ app.get("/uni/:country_name", (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send("<h1>Webpage not found</h1>");
+    res.status(404).send("<h1>Webpage unknown</h1>");
 });
