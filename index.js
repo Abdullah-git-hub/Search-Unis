@@ -1,12 +1,13 @@
 const express = require("express");
 const fs = require("fs");
 
+const port = process.env.PORT || 3000;
 const app = express();
 app.set("view engine", "ejs");
 
 app.use(express.static("countries"));
 
-app.listen(3000);
+app.listen(port);
 
 app.get("/", (req, res) => {
     // res.sendFile("./views/index.html", { root: __dirname });
